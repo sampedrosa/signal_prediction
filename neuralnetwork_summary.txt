@@ -1,0 +1,42 @@
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ input_1 (InputLayer)           [(None, 480, 640, 3)]  0           []                                                                                                                          
+                                                                                                  
+ conv2d (Conv2D)                (None, 478, 638, 32)   896         ['input_1[0][0]']                
+                                                                                                                                                                                          
+ max_pooling2d (MaxPooling2D)   (None, 239, 319, 32)   0           ['conv2d[0][0]']                 
+                                                                                                                                                                                             
+ input_2 (InputLayer)           [(None, 3, 21, 3)]     0           []                               
+                                                                                                   
+ dropout (Dropout)              (None, 239, 319, 32)   0           ['max_pooling2d[0][0]']                                                                                           
+                                                                                                  
+ dense (Dense)                  (None, 3, 21, 64)      256         ['input_2[0][0]']                
+                                                                                                  
+ conv2d_1 (Conv2D)              (None, 237, 317, 64)   18496       ['dropout[0][0]']                                                                                                                
+                                                                                                  
+ dropout_2 (Dropout)            (None, 3, 21, 64)      0           ['dense[0][0]']                  
+                                                                                                  
+ max_pooling2d_1 (MaxPooling2D)  (None, 118, 158, 64)  0          ['conv2d_1[0][0]']                                                                                                              
+                                                                                                  
+ dense_1 (Dense)                (None, 3, 21, 32)      2080        ['dropout_2[0][0]']              
+                                                                                                  
+ dropout_1 (Dropout)            (None, 118, 158, 64)   0           ['max_pooling2d_1[0][0]']                                                                        
+                                                                                                  
+ dropout_3 (Dropout)            (None, 3, 21, 32)      0           ['dense_1[0][0]']                
+                                                                                                  
+ flatten (Flatten)              (None, 1193216)        0           ['dropout_1[0][0]']              
+                                                                                                  
+ reshape (Reshape)              (None, 2016)           0           ['dropout_3[0][0]']              
+                                                                                                  
+ concatenate (Concatenate)      (None, 1195232)        0           ['flatten[0][0]', 'reshape[0][0]']                
+                                                                                                  
+ dense_2 (Dense)                (None, 32)             38247456    ['concatenate[0][0]']            
+                                                                                                  
+ dense_3 (Dense)                (None, 7)              231         ['dense_2[0][0]']                                                                                                          
+=================================================================================================
+Total params: 38,269,415
+Trainable params: 38,269,415
+Non-trainable params: 0
+__________________________________________________________________________________________________
