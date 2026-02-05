@@ -7,7 +7,7 @@
 </p>
 
 ---
-#### Recomendação de Leitura para Compreensão: [Apresentação do Projeto](../docs/apresentacao_tcc.pdf)
+#### Recomendação de Leitura para Compreensão: [Apresentação do Projeto](docs/apresentacao_tcc.pdf)
 ## Visão Geral
 
 Este projeto implementa uma pipeline completa para **reconhecimento/classificação de sinais em LIBRAS** e sua **tradução para o português escrito**, usando **Deep Learning** a partir de vídeos. O trabalho cobre desde a **construção/ampliação da base** até o **treinamento e comparação de modelos** com diferentes estratégias de pré-processamento e alinhamento temporal.
