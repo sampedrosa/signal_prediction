@@ -7,9 +7,10 @@
 </p>
 
 ---
+#### Recomendação de Leitura para Compreensão: [Apresentação do Projeto](../docs/apresentacao_tcc.pdf)
 ## Visão Geral
 
-Este repositório implementa uma pipeline completa para **reconhecimento/classificação de sinais em LIBRAS** e sua **tradução para o português escrito**, usando **Deep Learning** a partir de vídeos. O trabalho cobre desde a **construção/ampliação da base** até o **treinamento e comparação de modelos** com diferentes estratégias de pré-processamento e alinhamento temporal.
+Este projeto implementa uma pipeline completa para **reconhecimento/classificação de sinais em LIBRAS** e sua **tradução para o português escrito**, usando **Deep Learning** a partir de vídeos. O trabalho cobre desde a **construção/ampliação da base** até o **treinamento e comparação de modelos** com diferentes estratégias de pré-processamento e alinhamento temporal.
 
 ### 1) Base de dados (vídeos)
 - Foi utilizada a base pública **MINDS-LIBRAS** (20 sinais, 1.200 vídeos, 12 sinalizadores). :contentReference[oaicite:1]{index=1}  
